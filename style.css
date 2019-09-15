@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background: white;
+    width: 90%;
+    max-width: 1700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-text {
+    text-align: center;
+}
+
+.inputs {
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background: lightcoral; */
+    padding: 10px;
+}
+
+.inputs-height, .inputs-weight, .inputs-waist {
+    /* background: lightyellow; */
+    padding: 10px;
+    width: 100%;
+}
+
+.title-row {
+    /* background: lightblue; */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1rem;
+}
+
+.inputs-row {
+    /* background: lightgreen; */
+    display: flex;
+}
+
+h2 {
+    display: inline;
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+
+.button {
+    padding: 5px 16px;
+    background: #6dd5ed;
+    border: 2px solid #2193b0;
+    border-radius: 10px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #2193b0;
+    color: white;
+
+}
+
+input {
+    width: 150px;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0 1rem;
+    border-radius: 1.5rem;
+    border: 2px solid #2193b0;
+    transition: all 0.1s;
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+input:hover, input:focus, input:active {
+    border: 2px solid #156e85;
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.inputs-row div {
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: -0.5rem;
+    left: 2.75rem;
+    padding: 0 0.25rem;
+    background: white;
+}
+
+.results {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+}
+
+.result-text {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.result-bmi-text, .result-waist-text {
+    margin-left: 0;
+}
+
+.result {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.result-bar {
+    margin: 2rem 0;
+    width: 100%;
+    height: 2rem;
+    border-radius: 1rem;
+    background: red;
+    position: relative;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid black;
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 10px);
+  }
