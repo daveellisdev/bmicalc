@@ -13,7 +13,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
     background: #2193b0;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -61,6 +61,13 @@ body {
     margin-top: 1rem;
 }
 
+.optional {
+    padding-left: 26px;
+    position: relative;
+    top: -20px;
+    color: gray;
+}
+
 .inputs-row {
     /* background: lightgreen; */
     display: flex;
@@ -74,6 +81,8 @@ h2 {
 
 .button {
     padding: 5px 16px;
+    width: 165px;
+    text-align: center;
     background: #6dd5ed;
     border: 2px solid #2193b0;
     border-radius: 10px;
@@ -84,7 +93,20 @@ h2 {
 .button:hover {
     background: #2193b0;
     color: white;
+}
 
+.calc {
+    background: #6dedad;
+    border: 2px solid #21b08c;
+}
+
+.calc:hover {
+    background: #21b08c;
+}
+
+.message-area {
+    height: 1rem;
+    margin: 1rem;
 }
 
 input {
@@ -151,7 +173,7 @@ label {
     width: 100%;
     height: 2rem;
     border-radius: 1rem;
-    background: red;
+    background: linear-gradient(90deg, rgba(186,52,52,1) 12%, rgba(209,187,46,1) 13%, rgba(209,187,46,1) 17%, rgba(105,167,52,1) 18%, rgba(105,167,52,1) 49%, rgba(209,187,46,1) 50%, rgba(209,187,46,1) 51%, rgba(209,187,46,1) 75%, rgba(186,52,52,1) 76%, rgba(186,52,52,1) 100%);
     position: relative;
 }
 
@@ -164,4 +186,16 @@ label {
     position: absolute;
     top: -5px;
     left: calc(50% - 10px);
-  }
+    transition: left 1s;
+}
+
+@media (max-width: 800px){
+    .main-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .result-bmi-cat {
+        font-size: 1rem;
+    }
+}

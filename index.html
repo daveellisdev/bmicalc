@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Yet another BMI calcilator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
@@ -23,11 +23,11 @@
                     <div class="height-inputs-row inputs-row">
                         <div class="height-input-1">
                             <label for="height-input-1" class="input-label input-label-height-1" >Feet</label>
-                            <input type="number" class="height-input-1 input-box" placeholder="5" name="feet" min="3" max="8">
+                            <input type="number" class="height-input-1-box input-box" placeholder="5" name="feet" min="3" max="8">
                         </div>
                         <div class="height-input-2">
                             <label for="height-input-2" class="input-label input-label-height-2">Inches</label>
-                            <input type="number" class="height-input-2 input-box" placeholder="8 "name="inches" min="0" max="11">
+                            <input type="number" class="height-input-2-box input-box" placeholder="8 "name="inches" min="0" max="11">
                         </div>
                     </div>
                 </div>
@@ -39,26 +39,36 @@
                     <div class="weight-inputs-row inputs-row">
                         <div class="weight-input-1">
                             <label for="weight-input-1" class="input-label input-label-weight-1">Stone</label>
-                            <input type="number" class="weight-input-1 input-box" placeholder="11" name="stone" min="4" max="30">
+                            <input type="number" class="weight-input-1-box input-box" placeholder="11" name="stone" min="4" max="30">
                         </div>
                         <div class="weight-input-2">
-                            <label for="weight-input-2" class="input-label input-label-weight-1">Pounds</label>
-                            <input type="number" class="weight-input-2 input-box" placeholder="5" name="pounds"  min="0" max="13">
+                            <label for="weight-input-2" class="input-label input-label-weight-2">Pounds</label>
+                            <input type="number" class="weight-input-2-box input-box" placeholder="5" name="pounds"  min="0" max="13">
                         </div>
                     </div>
                 </div>
                 <div class="inputs-waist">
                     <div class="waist-title-row title-row">
                         <h2 class="waist-title">Waist Circumference</h2>
-                        <span class="weight-switch button">Switch to metric</span>
+                        <span class="waist-switch button">Switch to metric</span>
+                        
+                    </div>
+                    <div class="optional">
+                        <span>Optional</span>
                     </div>
                     <div class="waist-inputs-row inputs-row">
                         <div class="waist-input">
                             <label for="waist-input" class="input-label input-label-waist">Inches</label>
-                            <input type="number" class="waist-input input-box" placeholder="20" name="inches"  min="5" max="50">        
+                            <input type="number" class="waist-input-box input-box" placeholder="20" name="inches"  min="5" max="50">        
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="calc-button">
+                <span class="calc button">Calculate</span>
+            </div>
+            <div class="message-area">
+                <span class="message"></span>
             </div>
             <div class="results">
                 <div class="result-text">
