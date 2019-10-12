@@ -12,18 +12,19 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     /* height: 100vh; */
-    background: #2193b0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #203A43; 
+    /* background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027); 
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027);  */
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #E2E5E6;
 }
 
 .main-container {
-    background: white;
+    /* background: white; */
     width: 90%;
     max-width: 1700px;
     display: flex;
@@ -79,7 +80,7 @@ h2 {
     margin-left: 1rem;
 }
 
-.button {
+/* .button {
     padding: 5px 16px;
     width: 165px;
     text-align: center;
@@ -93,15 +94,32 @@ h2 {
 .button:hover {
     background: #2193b0;
     color: white;
+} */
+
+.button {
+    color: #E2E5E6;
+    text-decoration: none;
+    font-weight: 700;
+    background-color: #9A059F;
+    padding: 0.5rem;
+    text-align: center;
+    width: 120px;
+    transition: box-shadow 0.2s;
+    display: block;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: -5px 5px 0px 0px #49B099;
 }
 
 .calc {
-    background: #6dedad;
-    border: 2px solid #21b08c;
+    background: #49B099;
 }
 
 .calc:hover {
-    background: #21b08c;
+    background-color: #49B099;
+    box-shadow: -5px 5px 0px 0px #9A059F;
 }
 
 .message-area {
@@ -110,21 +128,24 @@ h2 {
 }
 
 input {
-    width: 150px;
+    width: 120px;
     font-size: 2rem;
     padding: 0.5rem;
     margin: 0 1rem;
     border-radius: 1.5rem;
-    border: 2px solid #2193b0;
+    border: 2px solid #49B099;
     transition: all 0.1s;
+    background: #203A43;
+    color: #E2E5E6;
+    transition: border 250ms;
 }
 
 input::placeholder {
-    color: lightgray;
+    color: rgb(99, 99, 99);
 }
 
 input:hover, input:focus, input:active {
-    border: 2px solid #156e85;
+    border: 2px solid #9A059F;
     outline: none;
 }
 
@@ -143,7 +164,12 @@ label {
     top: -0.5rem;
     left: 2.75rem;
     padding: 0 0.25rem;
-    background: white;
+    background: #203A43;
+}
+
+.message {
+    color: #ff6700;
+    font-weight: bold;
 }
 
 .results {
@@ -182,7 +208,7 @@ label {
     height: 0; 
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 15px solid black;
+    border-top: 15px solid #9A059F;
     position: absolute;
     top: -5px;
     left: calc(50% - 10px);
@@ -190,9 +216,18 @@ label {
 }
 
 @media (max-width: 800px){
+    h2 {
+        font-size: 1rem;
+    }
+
     .main-container {
         width: 100%;
         max-width: 100%;
+    }
+
+    .result-bar {
+        margin: 2rem auto;
+        width: 86%;
     }
 
     .result-bmi-cat {

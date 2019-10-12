@@ -31,9 +31,9 @@ let ViewController = (function() {
             waist = ["Inches"]
         ],
         metric = [
-            height = ["Metres", "Centimeters"],
-            weight = ["Kilograms", "Grams"],
-            waist = ["Centimeters"]
+            height = ["Metres", "Cm"],
+            weight = ["Kg", "Grams"],
+            waist = ["Cm"]
         ]
     ];
 
@@ -63,8 +63,13 @@ let ViewController = (function() {
             }
 
             position = (results.bmi - 15) * 5;
+            if(position<0){
+                position = 0;
+            } else if (position > 100){
+                position = 100;
+            }
+            
             this.getEl(DOMStrings.arrow).style.cssText = `left: calc(${position}% - 10px)`;
-            console.log(position);
 
             if(results.bmi <= 18.5){
                 cat = "Underweight";
@@ -74,6 +79,8 @@ let ViewController = (function() {
                 cat = "Overweight"
             } else if(results.bmi >= 30) {
                 cat = "Obese"
+            } else {
+                cat = "---"
             }
             this.getEl(DOMStrings.resultBMICat).innerText = cat;
         },
@@ -151,7 +158,7 @@ let ModelController = (function() {
         ratio: 0
     }
 
-    // 0 height 1 weight 2 waist
+    // height, weight, waist
     let metric = [false, false, false];
 
     return {
@@ -207,7 +214,16 @@ let AppController = (function(ViewCtrl, ModelCtrl){
         ViewCtrl.getEl(DOM.heightButton).addEventListener("click", switchMetric);
         ViewCtrl.getEl(DOM.weightButton).addEventListener("click", switchMetric);
         ViewCtrl.getEl(DOM.waistButton).addEventListener("click", switchMetric);
-        ViewCtrl.getEl(DOM.calc).addEventListener("click", collectInputs)
+        ViewCtrl.getEl(DOM.calc).addEventListener("click", collectInputs);
+
+        // selector for keypress enter
+        document.querySelectorAll("input").forEach(item => {
+            item.addEventListener("keypress", function(e){
+                if(e.key == "Enter"){
+                    collectInputs();
+                }
+            });
+        });
     };
 
     let switchMetric = function(e) {
@@ -236,6 +252,9 @@ let AppController = (function(ViewCtrl, ModelCtrl){
         height2 = parseInt(ViewCtrl.getEl(DOM.heightInput2).value);
         weight1 = parseInt(ViewCtrl.getEl(DOM.weightInput1).value);
         weight2 = parseInt(ViewCtrl.getEl(DOM.weightInput2).value);
+        if(isNaN(weight2)){
+            weight2 = 0;
+        }
         waist = parseInt(ViewCtrl.getEl(DOM.waistInput).value);
 
         if(metricSetting[0] === false){
@@ -273,8 +292,6 @@ let AppController = (function(ViewCtrl, ModelCtrl){
 
         results = ModelCtrl.getResults();
         ViewCtrl.updateResults(results);
-
-
     }
 
     return {
