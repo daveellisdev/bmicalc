@@ -1,91 +1,100 @@
 <!DOCTYPE html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Yet another BMI calcilator</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="main-container">
-            <div class="title">
-                <h1 class="title-text">BMI Calculator</h1>
-            </div>
-            <div class="inputs">
-                <div class="inputs-height">
-                    <div class="height-title-row title-row">
-                        <h2 class="height-title">Height</h2>
-                        <span class="height-switch button">Switch Units</span>
-                    </div>
-                    <div class="height-inputs-row inputs-row">
-                        <div class="height-input-1">
-                            <label for="height-input-1" class="input-label input-label-height-1" >Feet</label>
-                            <input type="number" class="height-input-1-box input-box" placeholder="5" name="feet" min="3" max="8">
-                        </div>
-                        <div class="height-input-2">
-                            <label for="height-input-2" class="input-label input-label-height-2">Inches</label>
-                            <input type="number" class="height-input-2-box input-box" placeholder="8 "name="inches" min="0" max="11">
-                        </div>
-                    </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Yet another BMI calcilator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="title">
+            <h1 class="title-text">BMI Calculator</h1>
+        </div>
+        <div class="inputs">
+            <div class="inputs-height">
+                <div class="height-title-row title-row">
+                    <h2 class="height-title">Height</h2>
+                    <span class="height-switch button">Switch Units</span>
                 </div>
-                <div class="inputs-weight">
-                    <div class="weight-title-row title-row">
-                        <h2 class="weight-title">Weight</h2>
-                        <span class="weight-switch button">Switch Units</span>
+                <div class="height-inputs-row inputs-row">
+                    <div class="height-input-1">
+                        <label for="height-input-1" class="input-label input-label-height-1">Feet</label>
+                        <input type="number" class="height-input-1-box input-box" placeholder="5" name="feet" min="3"
+                            max="8">
                     </div>
-                    <div class="weight-inputs-row inputs-row">
-                        <div class="weight-input-1">
-                            <label for="weight-input-1" class="input-label input-label-weight-1">Stone</label>
-                            <input type="number" class="weight-input-1-box input-box" placeholder="11" name="stone" min="4" max="30">
-                        </div>
-                        <div class="weight-input-2">
-                            <label for="weight-input-2" class="input-label input-label-weight-2">Pounds</label>
-                            <input type="number" class="weight-input-2-box input-box" placeholder="5" name="pounds"  min="0" max="13">
-                        </div>
-                    </div>
-                </div>
-                <div class="inputs-waist">
-                    <div class="waist-title-row title-row">
-                        <h2 class="waist-title">Waist Circumference</h2>
-                        <span class="waist-switch button">Switch Units</span>
-                        
-                    </div>
-                    <div class="optional">
-                        <span>Optional</span>
-                    </div>
-                    <div class="waist-inputs-row inputs-row">
-                        <div class="waist-input">
-                            <label for="waist-input" class="input-label input-label-waist">Inches</label>
-                            <input type="number" class="waist-input-box input-box" placeholder="20" name="inches"  min="5" max="50">        
-                        </div>
+                    <div class="height-input-2">
+                        <label for="height-input-2" class="input-label input-label-height-2">Inches</label>
+                        <input type="number" class="height-input-2-box input-box" placeholder="8 " name="inches" min="0"
+                            max="11">
                     </div>
                 </div>
             </div>
-            <div class="calc-button">
-                <span class="calc button">Calculate</span>
-            </div>
-            <div class="message-area">
-                <span class="message"></span>
-            </div>
-            <div class="results">
-                <div class="result-text">
-                    <h2 class="result-bmi-text">BMI</h2>
-                    <div class="blank"><!-- blank for grid --></div>
-                    <h2 class="result-waist-text">Waist/Height Ratio</h2>
-                    <span class="result-bmi result">---</span>
-                    <span class="result-bmi-cat result">---</span>
-                    <span class="result-waist result">---</span>
+            <div class="inputs-weight">
+                <div class="weight-title-row title-row">
+                    <h2 class="weight-title">Weight</h2>
+                    <span class="weight-switch button">Switch Units</span>
                 </div>
-                <div class="result-graphic">
-                    <div class="result-bar">
-                        <div class="arrow-down"></div>
+                <div class="weight-inputs-row inputs-row">
+                    <div class="weight-input-1">
+                        <label for="weight-input-1" class="input-label input-label-weight-1">Stone</label>
+                        <input type="number" class="weight-input-1-box input-box" placeholder="11" name="stone" min="4"
+                            max="30">
+                    </div>
+                    <div class="weight-input-2">
+                        <label for="weight-input-2" class="input-label input-label-weight-2">Pounds</label>
+                        <input type="number" class="weight-input-2-box input-box" placeholder="5" name="pounds" min="0"
+                            max="13">
+                    </div>
+                </div>
+            </div>
+            <div class="inputs-waist">
+                <div class="waist-title-row title-row">
+                    <h2 class="waist-title">Waist Circumference</h2>
+                    <span class="waist-switch button">Switch Units</span>
+
+                </div>
+                <div class="optional">
+                    <span>Optional</span>
+                </div>
+                <div class="waist-inputs-row inputs-row">
+                    <div class="waist-input">
+                        <label for="waist-input" class="input-label input-label-waist">Inches</label>
+                        <input type="number" class="waist-input-box input-box" placeholder="20" name="inches" min="5"
+                            max="50">
                     </div>
                 </div>
             </div>
         </div>
-        <script src="script.js" async defer></script>
-    </body>
+        <div class="calc-button">
+            <span class="calc button">Calculate</span>
+        </div>
+        <div class="message-area">
+            <span class="message"></span>
+        </div>
+        <div class="results">
+            <div class="result-text">
+                <h2 class="result-bmi-text">BMI</h2>
+                <div class="blank">
+                    <!-- blank for grid -->
+                </div>
+                <h2 class="result-waist-text">Waist/Height Ratio</h2>
+                <span class="result-bmi result">---</span>
+                <span class="result-bmi-cat result">---</span>
+                <span class="result-waist result">---</span>
+            </div>
+            <div class="result-graphic">
+                <div class="result-bar">
+                    <div class="arrow-down"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" async defer></script>
+</body>
+
 </html>

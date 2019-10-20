@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-body,html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
@@ -13,7 +14,7 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: #203A43; 
+    background: #203A43;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +35,7 @@ body {
     border-bottom: 0px solid #9A059F;
 }
 
-.title-back a:hover{
+.title-back a:hover {
     color: #9A059F;
     border-bottom: 5px solid #49B099;
 }
@@ -61,7 +62,9 @@ body {
     padding: 10px;
 }
 
-.inputs-height, .inputs-weight, .inputs-waist {
+.inputs-height,
+.inputs-weight,
+.inputs-waist {
     padding: 10px;
     width: 100%;
 }
@@ -138,15 +141,17 @@ input::placeholder {
     color: rgba(117, 117, 117, 0.425);
 }
 
-input:hover, input:focus, input:active {
+input:hover,
+input:focus,
+input:active {
     border: 2px solid #9A059F;
     outline: none;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .inputs-row div {
@@ -179,7 +184,8 @@ label {
     grid-template-columns: 33% 33% 33%;
 }
 
-.result-bmi-text, .result-waist-text {
+.result-bmi-text,
+.result-waist-text {
     margin-left: 0;
 }
 
@@ -193,13 +199,13 @@ label {
     width: 100%;
     height: 2rem;
     border-radius: 1rem;
-    background: linear-gradient(90deg, rgba(186,52,52,1) 12%, rgba(209,187,46,1) 13%, rgba(209,187,46,1) 17%, rgba(105,167,52,1) 18%, rgba(105,167,52,1) 49%, rgba(209,187,46,1) 50%, rgba(209,187,46,1) 51%, rgba(209,187,46,1) 75%, rgba(186,52,52,1) 76%, rgba(186,52,52,1) 100%);
+    background: linear-gradient(90deg, rgba(186, 52, 52, 1) 12%, rgba(209, 187, 46, 1) 13%, rgba(209, 187, 46, 1) 17%, rgba(105, 167, 52, 1) 18%, rgba(105, 167, 52, 1) 49%, rgba(209, 187, 46, 1) 50%, rgba(209, 187, 46, 1) 51%, rgba(209, 187, 46, 1) 75%, rgba(186, 52, 52, 1) 76%, rgba(186, 52, 52, 1) 100%);
     position: relative;
 }
 
 .arrow-down {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 15px solid #9A059F;
@@ -209,14 +215,15 @@ label {
     transition: left 1s;
 }
 
-@media(pointer: coarse){
+@media(pointer: coarse) {
+
     input,
     .button {
         transition: none;
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     h2 {
         font-size: 1rem;
     }
