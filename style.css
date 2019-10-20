@@ -13,18 +13,33 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    /* height: 100vh; */
     background: #203A43; 
-    /* background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027); 
-    background: linear-gradient(to left, #2C5364, #203A43, #0F2027);  */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #E2E5E6;
 }
 
+.title-back {
+    position: relative;
+    left: 10px
+}
+
+.title-back a,
+.title-back a:active,
+.title-back a:visited {
+    text-decoration: none;
+    color: #49B099;
+    transition: all 0.2s;
+    border-bottom: 0px solid #9A059F;
+}
+
+.title-back a:hover{
+    color: #9A059F;
+    border-bottom: 5px solid #49B099;
+}
+
 .main-container {
-    /* background: white; */
     width: 90%;
     max-width: 1700px;
     display: flex;
@@ -43,18 +58,15 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* background: lightcoral; */
     padding: 10px;
 }
 
 .inputs-height, .inputs-weight, .inputs-waist {
-    /* background: lightyellow; */
     padding: 10px;
     width: 100%;
 }
 
 .title-row {
-    /* background: lightblue; */
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -70,7 +82,6 @@ body {
 }
 
 .inputs-row {
-    /* background: lightgreen; */
     display: flex;
 }
 
@@ -79,22 +90,6 @@ h2 {
     font-size: 1.25rem;
     margin-left: 1rem;
 }
-
-/* .button {
-    padding: 5px 16px;
-    width: 165px;
-    text-align: center;
-    background: #6dd5ed;
-    border: 2px solid #2193b0;
-    border-radius: 10px;
-    transition: background 0.2s;
-    cursor: pointer;
-}
-
-.button:hover {
-    background: #2193b0;
-    color: white;
-} */
 
 .button {
     color: #E2E5E6;
@@ -134,14 +129,13 @@ input {
     margin: 0 1rem;
     border-radius: 1.5rem;
     border: 2px solid #49B099;
-    transition: all 0.1s;
     background: #203A43;
     color: #E2E5E6;
     transition: border 250ms;
 }
 
 input::placeholder {
-    color: rgb(99, 99, 99);
+    color: rgba(117, 117, 117, 0.425);
 }
 
 input:hover, input:focus, input:active {
@@ -213,6 +207,13 @@ label {
     top: -5px;
     left: calc(50% - 10px);
     transition: left 1s;
+}
+
+@media(pointer: coarse){
+    input,
+    .button {
+        transition: none;
+    }
 }
 
 @media (max-width: 800px){
