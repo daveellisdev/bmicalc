@@ -15,10 +15,35 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     background: #203A43;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     color: #E2E5E6;
+}
+
+.return-link {
+    align-items: left;
+}
+
+.return,
+.return:active,
+.return:visited {
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #49B099;
+    transition: all 0.2s;
+    border-bottom: 0px solid #9A059F;
+}
+
+.return:hover {
+    color: #9A059F;
+    border-bottom: 5px solid #49B099;
+}
+
+.header-title {
+    text-align: left;
 }
 
 .title-back {
@@ -218,6 +243,7 @@ label {
 @media(pointer: coarse) {
 
     input,
+    .return,
     .button {
         transition: none;
     }
