@@ -75,7 +75,7 @@ let ViewController = (function () {
                 cat = "Underweight";
             } else if (results.bmi > 18.5 && results.bmi < 25) {
                 cat = "Healthy"
-            } else if (results.bmi >= 25 && results.bmi <= 29.9) {
+            } else if (results.bmi >= 25 && results.bmi < 30) {
                 cat = "Overweight"
             } else if (results.bmi >= 30) {
                 cat = "Obese"
